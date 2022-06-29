@@ -1,0 +1,18 @@
+html {
+    background-color: #C5CFD6;
+}
+
+header:first-child {
+    margin-top: 40px;
+    margin-left: 0px;
+    background-color: #C5CFD6;
+}
+
+body {
+    margin: 1vh;
+    background-color: #C5CFD6;
+}
+
+body .container {
+    background-color: #C5CFD6;
+}
