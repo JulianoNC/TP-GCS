@@ -11,6 +11,19 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <script>
+        function abrirModal(){
+            var modal = document.getElementById("modalNovaLista")
+            modal.style.display = "block"
+        }
+    </script>
+    <script>
+        function fecharModal(){
+            var modal = document.getElementById("modalNovaLista")
+            modal.style.display = "none"
+        }
+    </script>
+
 </head>
 
 
@@ -24,7 +37,38 @@
             <div class="col">
                 <div class="input-group">
                     <input id="inputText" type="text" class="form-control " placeholder="Buscar">
+                    <div class="input-group-append ">
+                        <button id="filtrarBTN" class="input-group-text" type="button">
+                            <i class="material-icons">
+                                search
+                            </i>
+                        </button>
+                    </div>
                 </div>
+            </div>
+
+            <div class="col d-flex  flex-row-reverse">
+                <button class="btn btn-primary" onclick="abrirModal()">Nova Lista</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modalNovaLista" class="modal">
+        <div class="modal-content">
+
+            <div class="row">
+                <div class="col">
+                    <input id="inputText-titulo" type="text" class="form-control " placeholder="Titulo">
+                </div>
+            </div>
+            <div class="my-2 col flex-row-reverse">
+                <button id="filtrarBTN" class="btn btn-success" type="button">
+                    SALVAR
+                </button>
+                <button id="filtrarBTN" onclick="fecharModal()" class="btn btn-danger" type="button">
+                    CANCELAR
+                </button>
             </div>
         </div>
     </div>
